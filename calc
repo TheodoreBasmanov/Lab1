@@ -1,2 +1,25 @@
 #!/bin/bash
-
+result=0
+if [[ $1 = "sum" ]] 
+then 
+let result=$2\+$3 
+else 
+if [[ $1 = "sub" ]] 
+then 
+let result=$2\-$3 
+else 
+if [[ $1 = "mul" ]] 
+then 
+let result=$2\*$3 
+else 
+if [[ $1 = "div" ]] 
+then 
+let result=$2\/$3
+else
+echo "Wrong Second Arguement."
+exit 
+fi
+fi
+fi
+fi
+echo $result
