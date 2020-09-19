@@ -68,18 +68,12 @@ if [[ $interactiveFlag -eq 0 ]]
 then 
 echo "The Interactive file seems to be missing."
 fi
-numberCheck='^[0-9]+$'
 if [[ "$1" = "calc" ]]
 then
 if [[ $calcFlag -eq 0 ]]
 then
 echo "The file is still missing."
 else
-if ! [[ $3 =~ $numberCheck ]] || ! [[ $4 =~ $numberCheck ]]
-then
-echo "Third and Fourth arguements should be integer numbers."
-else
 ./calc $2 $3 $4
-fi
 fi
 fi
