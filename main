@@ -74,6 +74,26 @@ if [[ $calcFlag -eq 0 ]]
 then
 echo "The file is still missing."
 else
+if [[ "$#" -lt 4 ]]
+then
+echo "Not enough arguements."
+else
 ./calc $2 $3 $4
+fi
+fi
+else
+if [[ "$1" = "search" ]]
+then
+if [[ $searchFlag -eq 0 ]]
+then 
+echo "The file is still missing."
+else
+if [[ "$#" -lt 3 ]]
+then
+echo "Not enouh arguements."
+else
+./search $2 $3
+fi
+fi
 fi
 fi

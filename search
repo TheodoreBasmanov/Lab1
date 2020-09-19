@@ -1,3 +1,8 @@
 #!/bin/bash
+if ! [[ -d $1 ]]
+then 
+echo "The directory dosn't exist"
+exit
+fi
 grep -R $2 $1
 
