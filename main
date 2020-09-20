@@ -109,6 +109,22 @@ else
 ./reverse $2 $3
 fi
 fi
+else
+if [[ "$1" = "strlen" ]]
+then
+if [[ $strlenFlag -eq 0 ]]
+then
+echo "The file is still missing."
+else
+if [[ "$#" -lt 2 ]]
+then
+echo "Not enough arguements."
+else
+./strlen $2
+fi
+fi
+
+fi
 fi
 fi
 fi
