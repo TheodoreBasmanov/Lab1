@@ -1,4 +1,14 @@
 #!/bin/bash
+if ! [[ -f $1 ]]
+then 
+echo "The first file doesn't exist."
+exit
+fi
+if ! [[ -f $2 ]]
+then 
+echo "The second file doens't exist."
+exit
+fi
 exec 1>>$2
 arr=()
 readarray arr < $1

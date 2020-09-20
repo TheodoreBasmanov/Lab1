@@ -90,9 +90,24 @@ echo "The file is still missing."
 else
 if [[ "$#" -lt 3 ]]
 then
-echo "Not enouh arguements."
+echo "Not enough arguements."
 else
 ./search $2 $3
+fi
+fi
+else
+if [[ "$1" = "reverse" ]]
+then
+if [[ $reverseFlag -eq 0 ]]
+then 
+echo "The file is still missing."
+else
+if [[ "$#" -lt 3 ]]
+then 
+echo "Not enough arguements."
+else
+./reverse $2 $3
+fi
 fi
 fi
 fi
