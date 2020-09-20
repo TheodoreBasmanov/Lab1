@@ -150,6 +150,15 @@ echo "The file is still missing."
 else
 ./help
 fi
+else
+if [[ "$1" = "interactive" ]]
+then
+if [[ $interactiveFlag -eq 0 ]]
+then echo "The file is still missing."
+else
+./interactive
+fi
+fi
 fi
 fi
 fi
