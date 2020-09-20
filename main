@@ -123,7 +123,17 @@ else
 ./strlen $2
 fi
 fi
+else
+if [[ "$1" = "log" ]]
+then
+if [[ $logFlag -eq 0 ]]
+then
+echo "The file is still missing."
+else
+./log
+fi
 
+fi
 fi
 fi
 fi

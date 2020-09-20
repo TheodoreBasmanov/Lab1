@@ -1,6 +1,6 @@
 #!/bin/bash
-numberCheck='^[0-9]+$'
-if ! [[ $2 =~ $numberCheck ]] || ! [[ $4 =~ $numberCheck ]]
+numberCheck='^-?[0-9]+$'
+if ! [[ $2 =~ $numberCheck ]] || ! [[ $3 =~ $numberCheck ]]
 then 
 echo "Third and Fourth arguements should be integer numbers."
 exit
