@@ -132,7 +132,26 @@ echo "The file is still missing."
 else
 ./log
 fi
-
+else
+if [[ "$1" = "exit" ]]
+then
+if [[ "$#" -lt 3 ]]
+then 
+exit $3
+else
+exit 0
+fi
+else
+if [[ "$1" = "help" ]]
+then
+if [[ $helpFlag -eq 0 ]]
+then
+echo "The file is still missing."
+else
+./help
+fi
+fi
+fi
 fi
 fi
 fi
