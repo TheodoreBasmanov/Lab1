@@ -81,7 +81,7 @@ if [[ "$insert" = "b" ]] || [[ "$insert" = "Search" ]]
 then
 if [[ $searchFlag -eq 0 ]]
 then
-echo "The file is still missing."
+echo "The file is still missing." 1>&2
 continue
 else
 echo "Insert the name of the directory and a regular expression."
@@ -93,7 +93,7 @@ if [[ "$insert" = "c" ]] || [[ "$insert" = "reverse" ]]
 then
 if [[ $reverseFlag -eq 0 ]]
 then
-echo "The file is still missing."
+echo "The file is still missing." 1>&2
 continue
 else
 echo "Insert two names of the files."
@@ -105,7 +105,7 @@ if [[ "$insert" = "d" ]] || [[ "$insert" = "String length" ]]
 then
 if [[ $strlenFlag -eq 0 ]]
 then
-echo "The file is still missing."
+echo "The file is still missing." 1>&2
 continue
 else
 echo "Insert a line."
@@ -117,7 +117,7 @@ if [[ "$insert" = "e" ]] || [[ "$insert" = "Log" ]]
 then
 if [[ $logFlag -eq 0 ]]
 then
-echo "The file is still missing."
+echo "The file is still missing." 1>&2
 continue
 else
 ./log
@@ -127,11 +127,13 @@ if [[ "$insert" = "g" ]] || [[ "$insert" = "Help" ]]
 then
 if [[ $helpFlag -eq 0 ]]
 then
-echo "The file is still missing."
+echo "The file is still missing." 1>&2
 continue
 else
 ./help
 fi 
+else
+echo "There's no such command, look the menu up." 1>&2
 fi
 fi
 fi
