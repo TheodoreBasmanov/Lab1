@@ -101,7 +101,7 @@ read file1 file2
 ./reverse $file1 $file2
 fi
 else
-if [[ "$insert" = "d" ]] || [[ "$insert" = "String length" ]]
+if [[ "$insert" = "d" ]] || [[ "$insert" = "String Length" ]]
 then
 if [[ $strlenFlag -eq 0 ]]
 then
