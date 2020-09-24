@@ -1,4 +1,5 @@
 #!/bin/bash
+#Check if the files exist:
 if ! [[ -f $1 ]]
 then 
 echo "The first file doesn't exist." 1>&2
@@ -9,6 +10,7 @@ then
 echo "The second file doens't exist." 1>&2
 exit -4
 fi
+#Write the reversed file:
 exec 1>>$2
 arr=()
 readarray arr < $1

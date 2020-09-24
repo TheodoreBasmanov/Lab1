@@ -1,10 +1,12 @@
 #!/bin/bash
+#Check if arguements are integer numbers:
 numberCheck='^-?[0-9]+$'
 if ! [[ $2 =~ $numberCheck ]] || ! [[ $3 =~ $numberCheck ]]
 then 
 echo "Third and Fourth arguements should be integer numbers." 1>&2
 exit -1
 fi
+#Calculate the result:
 result=0
 if [[ $1 = "sum" ]] 
 then 

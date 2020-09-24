@@ -1,4 +1,5 @@
 #!/bin/bash
+#Find the length of the string:
 string=$1
 echo ${#string}
 
