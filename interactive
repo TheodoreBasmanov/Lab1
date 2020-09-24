@@ -10,51 +10,7 @@ ${nl}f. Exit;
 ${nl}g. Help;
 ${nl} Insert the letter or the name of the command. To exit insert Exit or f."
 
-./FileCheck
-calcFlag=0;
-searchFlag=0;
-reverseFlag=0;
-strlenFlag=0;
-logFlag=0;
-helpFlag=0;
-directoryPath="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
-fileName=calc
-fileExist=$(find $directoryPath -name $fileName)
-if [[ $fileExist ]]
-then
-calcFlag=1
-fi
-fileName=search
-fileExist=$(find $directoryPath -name $fileName)
-if [[ $fileExist ]]
-then
-searchFlag=1
-fi
-fileName=reverse
-fileExist=$(find $directoryPath -name $fileName)
-if [[ $fileExist ]]
-then
-reverseFlag=1
-fi
-fileName=strlen
-fileExist=$(find $directoryPath -name $fileName)
-if [[ $fileExist ]]
-then
-strlenFlag=1
-fi
-fileName=log
-fileExist=$(find $direcotoryPath -name $fileName)
-if [[ $fileExist ]]
-then
-logFlag=1
-fi
-fileName=help
-fileExist=$(find $directoryPath -name $fileName)
-if [[ $fileExist ]]
-then
-helpFlag=1
-fi
-
+source FileCheck
 while :
 do
 echo "$menu"
