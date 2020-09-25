@@ -71,7 +71,7 @@ then
 echo "Not enough arguements." 1>&2
 exit -6
 else
-./strlen $2
+./strlen $*
 fi
 fi
 else

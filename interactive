@@ -81,8 +81,7 @@ then
 echo "The file is still missing." 1>&2
 continue
 else
-echo "Insert a line."
-read line
+read -e -r line
 ./strlen $line
 fi
 else
