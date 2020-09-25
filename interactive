@@ -11,7 +11,16 @@ ${nl}f. Exit;
 ${nl}g. Help;
 ${nl} Insert the letter or the name of the command. To exit insert Exit or f."
 #Check the files:
+dir="$( dirname "${BASH_SOURCE[0]}")"
+fileName="FileCheck"
+fileExists=$(find "$dir" -name "$fileName")
+if [[ $fileExists ]]
+then
 source FileCheck
+else
+echo "The file check file is missing." 1>&2
+exit -5
+fi
 #Get the command and the arguements. If there's not enough arguements, unlike main the app wouldn't show an error message, since the user was specifically told what to insert.
 while :
 do

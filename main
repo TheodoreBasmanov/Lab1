@@ -1,6 +1,15 @@
 #!/bin/bash
 #Check the files.
+dir="$( dirname "${BASH_SOURCE[0]}" )"
+fileName="FileCheck"
+fileExists=$(find "$dir" -name "$fileName")
+if [[ $fileExists ]]
+then
 source FileCheck
+else
+echo "The file check file is missing." 1>&2
+exit -5
+fi
 #Get the arguements. If there's not enough arguements or the file is still missing the app will end its work with an error message and a negative exit code.
 if [[ "$1" = "calc" ]]
 then
