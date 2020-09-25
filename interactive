@@ -40,9 +40,15 @@ fi
 else
 if [[ "$insert" = "f" ]] || [[ "$insert" = "Exit" ]]
 then
-echo "Insert two or more integer numeric arguements or don't."
-read arg1 arg2
-exit $arg2
+echo "Insert one numeric arguement or don't."
+read arg1 
+numberCheck='^[-,+]?[0-9]+$'
+if ! [[ $arg1 =~ $numberCheck ]]
+then 
+exit 0
+else
+exit $arg1
+fi
 else
 if [[ "$insert" = "b" ]] || [[ "$insert" = "Search" ]]
 then
